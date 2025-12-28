@@ -1,3 +1,10 @@
+"""
+Smart Face Recognition Attendance System
+
+Author: Rohini Kasarapu
+Description: Face recognition based attendance system using Python and OpenCV.
+"""
+
 import cv2
 import numpy as np
 import os
@@ -19,9 +26,9 @@ labels = []
 label_map = {}
 label_id = 0
 
-# =========================
+
 # LOAD DATASET (MULTI IMAGE PER PERSON)
-# =========================
+
 for folder in os.listdir(DATASET_PATH):
     person_path = os.path.join(DATASET_PATH, folder)
     if not os.path.isdir(person_path):
@@ -47,9 +54,9 @@ labels = np.array(labels)
 recognizer.train(faces, labels)
 print("✅ Training completed")
 
-# =========================
+
 # ATTENDANCE (SAME FILE)
-# =========================
+
 already_printed = set()
 
 def mark_attendance(label_name):
@@ -59,7 +66,7 @@ def mark_attendance(label_name):
 
     file_path = os.path.join(os.getcwd(), "attendance.csv")
 
-    # 🔒 Already printed → do nothing
+    # Already printed → do nothing
     if key in already_printed:
         return
 
@@ -91,14 +98,12 @@ def mark_attendance(label_name):
     else:
         print(f"ℹ️ {roll} already marked today")
 
-    # ✅ Remember that we printed
     already_printed.add(key)
 
 
 
-# =========================
 # WEBCAM
-# =========================
+
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 if not cap.isOpened():
@@ -140,4 +145,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
