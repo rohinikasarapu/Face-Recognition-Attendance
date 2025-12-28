@@ -25,3 +25,11 @@ attendance in an Excel (CSV) file.
 
 ## Note
 For privacy reasons, real student images are not included.
+## Author
+
+**Rohini Kasarapu**  
+Student | Aspiring Software Developer  
+
+📧 Email: rohinikasarapu2110.com  
+🔗 GitHub: https://github.com/rohinikasarapu
+
