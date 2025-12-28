@@ -1,0 +1,23 @@
+Dataset Folder
+
+This folder is used to store student face images for the Smart Face Attendance System.
+
+Folder Structure:
+- Each student should have a separate folder.
+- Folder name format: RollNumber_Name
+
+Example:
+dataset/
+└── 23NM1A0579_Rohini/
+    ├── 1.jpg
+    ├── 2.jpg
+    ├── 3.jpg
+
+Image Guidelines:
+- Use clear face images (passport-size preferred).
+- One face per image.
+- JPG format only.
+- Minimum 2 images per student recommended.
+
+Note:
+Real student images are not included in this repository for privacy reasons.
